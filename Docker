@@ -1,21 +1,20 @@
-FROM python:3.13-slim
+# 1. Bazaviy imij sifatida Python 3.10 tanlaymiz
+FROM python:3.10-slim
 
-# Rust o'rnatish
-RUN apt update && apt install -y curl build-essential
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-ENV PATH="/root/.cargo/bin:${PATH}"
-
-# Ishchi katalog
+# 2. Ishchi katalog
 WORKDIR /app
 
-# Fayllarni ko'chirish
+# 3. Dependencieslarni ko‘chirish
 COPY requirements.txt .
 
-# Virtualenv va o'rnatish
-RUN python -m venv .venv
-RUN .venv/bin/pip install --upgrade pip
-RUN .venv/bin/pip install -r requirements.txt
+# 4. System dependencies (Rust kerak bo‘lmaydi, pip orqali o‘rnatamiz)
+RUN apt-get update && apt-get install -y build-essential \
+    && pip install --upgrade pip \
+    && pip install -r requirements.txt \
+    && apt-get clean
 
-# Bot faylini ko'chirish va ishga tushirish
+# 5. Kodni ko‘chirish
 COPY . .
-CMD [".venv/bin/python", "bot.py"]
+
+# 6. Botni ishga tushirish
+CMD ["python", "bot.py"]
