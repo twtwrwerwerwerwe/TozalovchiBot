@@ -1,0 +1,21 @@
+FROM python:3.13-slim
+
+# Rust o'rnatish
+RUN apt update && apt install -y curl build-essential
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+# Ishchi katalog
+WORKDIR /app
+
+# Fayllarni ko'chirish
+COPY requirements.txt .
+
+# Virtualenv va o'rnatish
+RUN python -m venv .venv
+RUN .venv/bin/pip install --upgrade pip
+RUN .venv/bin/pip install -r requirements.txt
+
+# Bot faylini ko'chirish va ishga tushirish
+COPY . .
+CMD [".venv/bin/python", "bot.py"]
