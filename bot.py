@@ -17,10 +17,10 @@ KEYWORDS = [
     "✅PIJAMALAR💣💣💣💣", "Документ кламиз", "Регистрация",
     "Whatsap✅Tелеграм✅Имо✅", "olib ketaman", "1kerak sroshniga",
     "🚕🚕  🚕🚕", "Toshkentga yuraman",
-    "Rishton atrofida odam oʻsha olamiz tel", "olamiz",
+    "Rishton atrofida odam poʻsha olamiz tel", "olamiz",
     "OPTOM", "AKSIYA", "SKIDKA", "Reklamachi",
     "BREND TAVARLARI", "ОДАМ ОЛАМИЗ", "🅰️🅰️🅰️🅰️🅰️🅰️🅰️🅰️",
-    "FERAMONLI PARFYUMLAR",
+    "FERAMONLI PARFYUMLAR", "БАГАЖ БОР", "АВТО КОБЛТ "
     "✅LICHEBNIY INTIM kosmetikalar", "TAKRORLANMAS KECHA XADYA ETING!", "ГИЖЖАЛАРДАН БУТКУЛ ҚУТУЛИН!", "✅Тез шомолаш",
     "⚠️Шошилинг — акция чегараланган!", "Бу гижжалар ички органларингизни зарарлайди, ва натижада", "Фақат 72 соат ичида барча гижжалар чиқиб кетади"
 ]
