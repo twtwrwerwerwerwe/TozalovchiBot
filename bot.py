@@ -2,10 +2,8 @@
 import asyncio
 import logging
 import re
-from aiogram import Bot, Dispatcher
-from aiogram.filters import ChatTypeFilter
-from aiogram.types import Message
-from aiogram.enums import ChatType
+from aiogram import Bot, Dispatcher, types
+from aiogram.utils import executor
 
 # ---------------- CONFIG ----------------
 TOKEN = "8534997492:AAHlG2hdvkZO1d09uMbwgly3AwrZgWuxIf8"
@@ -27,41 +25,43 @@ KEYWORDS = [
     "✅LICHEBNIY INTIM kosmetikalar", "TAKRORLANMAS KECHA XADYA ETING!"
 ]
 
-# Hammasini lower ga o‘tkazamiz
+# Hammasini lowerga o‘tkazamiz
 KEYWORDS = list(set(k.lower() for k in KEYWORDS))
 
-# REGEX pattern (super tez)
+# REGEX pattern — juda tez ishlaydi!
 REGEX_PATTERN = re.compile("|".join(re.escape(k) for k in KEYWORDS), re.IGNORECASE)
 
 # ---------------- START BOT ----------------
 logging.basicConfig(level=logging.INFO)
+
 bot = Bot(token=TOKEN)
-dp = Dispatcher()
+dp = Dispatcher(bot)
 
-# Guruh va superguruhlar uchun filtr
-@dp.message(ChatTypeFilter(chat_type=[ChatType.GROUP, ChatType.SUPERGROUP]))
-async def cleaner(message: Message):
 
-    if not message.text:
+# Faqat guruh va superguruhdagi xabarlarni olish
+@dp.message_handler(content_types=types.ContentTypes.TEXT)
+async def cleaner(message: types.Message):
+
+    # Chat turi GROUP yoki SUPERGROUP bo‘lishi shart
+    if message.chat.type not in ["group", "supergroup"]:
         return
 
     text = message.text.lower()
 
-    # REGEX orqali tekshirish
+    # Kalit so‘zlarni tekshirish
     if REGEX_PATTERN.search(text):
 
         try:
             await message.delete()
             print(f"[O'CHIRILDI] → {text}")
         except Exception as e:
-            print("❌ Xabarni o‘chirib bo‘lmadi! Botga ADMIN huquqi bering.")
+            print("❌ Bot xabarni o‘chira olmadi! ADMIN huquqi kerak.")
             print("Xatolik:", e)
 
 
-async def main():
+async def on_startup(_):
     print("🚀 Cleaner Bot ishga tushdi...")
-    await dp.start_polling(bot)
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
