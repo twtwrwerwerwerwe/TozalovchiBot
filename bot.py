@@ -20,8 +20,7 @@ KEYWORDS = [
     "Rishton atrofida odam oʻsha olamiz tel", "olamiz",
     "OPTOM", "AKSIYA", "SKIDKA", "Reklamachi",
     "BREND TAVARLARI", "ОДАМ ОЛАМИЗ", "🅰️🅰️🅰️🅰️🅰️🅰️🅰️🅰️",
-    "FERAMONLI PARFYUMLAR", "odam bor", "pochta bor",
-    "mashina kerak", "kampilek odam bor", "kompilekt odam bor",
+    "FERAMONLI PARFYUMLAR",
     "✅LICHEBNIY INTIM kosmetikalar", "TAKRORLANMAS KECHA XADYA ETING!", "ГИЖЖАЛАРДАН БУТКУЛ ҚУТУЛИН!", "✅Тез шомолаш",
     "⚠️Шошилинг — акция чегараланган!", "Бу гижжалар ички органларингизни зарарлайди, ва натижада", "Фақат 72 соат ичида барча гижжалар чиқиб кетади"
 ]
