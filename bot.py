@@ -24,7 +24,7 @@ KEYWORDS = [
     "BREND TAVARLARI", "ОДАМ ОЛАМИЗ", "🅰️🅰️🅰️🅰️🅰️🅰️🅰️🅰️",
     "FERAMONLI PARFYUMLAR", "odam bor", "pochta bor",
     "mashina kerak", "kampilek odam bor", "kompilekt odam bor",
-    "✅LICHEBNIY INTIM kosmetikalar"
+    "✅LICHEBNIY INTIM kosmetikalar", "TAKRORLANMAS KECHA XADYA ETING!"
 ]
 
 # Hammasini lower ga o‘tkazamiz
