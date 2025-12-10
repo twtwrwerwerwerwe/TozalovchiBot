@@ -30,7 +30,7 @@ KEYWORDS = [
     "Eng kamida 1 mlndan  30  milliongacha  pul topasiz", "batafsil ma’lumot uchun lichkamga yozing", "UYIDA OʻTIRIB ISHLASHNI ISTAGAN AYOL VA QIZLARIMIZ",
     "5 ta bo'sh ish o'rni bor. Ta'lim bepul", "3 дона  жойимиз  бо", "олиб  кетамиз", "+998999776445", "+998884136677",
     "TEL QILORASLAR KETADIGONLAR", "+998905884243", "ONLAYN ISHGA TAKLIF", "Assalomu aleykum uyda oʼtirgan holda onlayn ishlashni hohlaysizm", "🅰️🅰️🅱️🆎🆎🆎🆑🅾️", "hammasi noldan oʼrgatilinadi",
-    "staj ketadi"
+    "staj ketadi", "914708861", "+998916910747", "𝗣𝗢𝗖𝗛𝗧𝗔 𝗢𝗟𝗔𝗠𝗜𝗭", "ЮРАМАН", "МАШИНА КОБАЛЬТ", "машена жентира", "оламиз"
 ]
 
 # ---- Hammasini lowercase ----
