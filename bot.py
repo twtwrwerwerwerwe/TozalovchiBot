@@ -1,8 +1,7 @@
+# cleaner_bot.py
 import asyncio
 import logging
 import re
-from datetime import datetime, timedelta
-
 from aiogram import Bot, Dispatcher, types
 from aiogram.utils import executor
 
@@ -34,106 +33,53 @@ KEYWORDS = [
     "staj ketadi", "914708861", "+998916910747", "𝗣𝗢𝗖𝗛𝗧𝗔 𝗢𝗟𝗔𝗠𝗜𝗭", "ЮРАМАН", "МАШИНА КОБАЛЬТ", "машена жентира", "оламиз"
 ]
 
+# ---- Hammasini lowercase ----
 KEYWORDS = list(set(k.lower() for k in KEYWORDS))
+
+# ---- REGEX pattern ----
 REGEX_PATTERN = re.compile("|".join(re.escape(k) for k in KEYWORDS), re.IGNORECASE)
 
 # ---- LOGGING ----
 logging.basicConfig(
-    level=logging.ERROR,
+    level=logging.ERROR,  # ❗ faqat xatolar chiqsin
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
+
 logger = logging.getLogger(__name__)
 
 # ---------------- START BOT ----------------
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
-# ---------------- GLOBAL ----------------
-# Har bir guruh uchun oxirgi tozalash vaqtini saqlaymiz
-group_cleanup_times = {}
 
-
-# -------------------------------------------------------------------
-#   🔥 1) Kalit so'zlarni topib o'chirish
-# -------------------------------------------------------------------
 @dp.message_handler(content_types=types.ContentTypes.TEXT)
 async def cleaner(message: types.Message):
+
+    # Faqat grouplarda ishlasin
     if message.chat.type not in ["group", "supergroup"]:
         return
 
-    chat_id = message.chat.id
     text = message.text.lower()
 
-    # Kalit so'z bo'lsa — o'chiriladi
+    # Kalit so‘z bordimi?
     if REGEX_PATTERN.search(text):
+
         try:
             await message.delete()
-        except Exception as e:
-            logger.error(f"Xabar o'chirilmadi: {e}")
-
-
-# -------------------------------------------------------------------
-#   🔥 2) Har 2 kunda avtomatik guruhni tozalash
-# -------------------------------------------------------------------
-async def auto_cleaner():
-    while True:
-        try:
-            for chat_id, last_time in list(group_cleanup_times.items()):
-
-                # 2 kun bo‘ldimi?
-                if datetime.utcnow() - last_time >= timedelta(days=2):
-
-                    # Guruhni tozalash
-                    try:
-                        # oxirgi 48 soatdagi xabarlarni o'chirish
-                        async for msg in bot.iter_history(chat_id, limit=500):
-                            try:
-                                await bot.delete_message(chat_id, msg.message_id)
-                            except:
-                                pass
-
-                        # Xabar yozish
-                        try:
-                            await bot.send_message(chat_id, "♻️ *Guruh tozalandi!*", parse_mode="Markdown")
-                        except:
-                            pass
-
-                        # vaqtni yangilash
-                        group_cleanup_times[chat_id] = datetime.utcnow()
-
-                    except Exception as e:
-                        logger.error(f"Guruhni tozalashda xatolik {chat_id}: {e}")
 
         except Exception as e:
-            logger.error(f"Auto-cleaner xatolik: {e}")
-
-        await asyncio.sleep(3600)  # 1 soatda 1 marta tekshiradi
-
-
-# -------------------------------------------------------------------
-#   🔥 3) Bot guruhga qo‘shilganda uni ro‘yxatga olish
-# -------------------------------------------------------------------
-@dp.message_handler(content_types=types.ContentTypes.NEW_CHAT_MEMBERS)
-async def new_member(message: types.Message):
-    for user in message.new_chat_members:
-        if user.id == (await bot.get_me()).id:
-            # Bot guruhga qo‘shildi
-            group_cleanup_times[message.chat.id] = datetime.utcnow()
-            try:
-                await message.answer("🧹 Tozalovchi bot ishga tushdi!")
-            except:
-                pass
+            # ❗ Faqat bitta ERROR log bo‘ladi, Railwayni portlatmaydi
+            logger.error(f"Xabar o‘chirilmadi! Sabab: {e}")
 
 
-# -------------------------------------------------------------------
 async def on_startup(_):
-    asyncio.create_task(auto_cleaner())
+    # ❗ hech qanday print/log yo‘q → Railway safe
+    pass
 
 
-# -------------------------------------------------------------------
 if __name__ == "__main__":
     executor.start_polling(
         dp,
-        skip_updates=True,
+        skip_updates=True,   # eski xabarlarni o‘qimaydi → log kam
         on_startup=on_startup
     )
