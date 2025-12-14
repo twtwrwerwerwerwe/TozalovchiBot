@@ -32,7 +32,7 @@ KEYWORDS = [
     "TEL QILORASLAR KETADIGONLAR", "+998905884243", "ONLAYN ISHGA TAKLIF", "Assalomu aleykum uyda oʼtirgan holda onlayn ishlashni hohlaysizm", "🅰️🅰️🅱️🆎🆎🆎🆑🅾️", "hammasi noldan oʼrgatilinadi",
     "staj ketadi", "914708861", "+998916910747", "𝗣𝗢𝗖𝗛𝗧𝗔 𝗢𝗟𝗔𝗠𝗜𝗭", "ЮРАМАН", "МАШИНА КОБАЛЬТ", "машена жентира", "оламиз",
     "946858486", "+998916858486", "+998932349830", "🏥Аптека", "https://t.me/aptekaonlinesam/618402", "Адрес:Беруний кўчаси 32А-уй", "Аптека: ALPHA PHARM",
-    "Ориентир", "@alphapharm111", "Иш вакти: 7:00 дан 23:00 гача"
+    "Ориентир", "@alphapharm111", "Иш вакти: 7:00 дан 23:00 гача", "ULAMOLAR BISOTIDAN", "Saodatga yetaklovchi hikmatlar", "@Bahodir2580", " Suhandon: Muhammad Nur"
 ]
 
 # ---- Hammasini lowercase ----
