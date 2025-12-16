@@ -33,7 +33,8 @@ KEYWORDS = [
     "staj ketadi", "914708861", "+998916910747", "𝗣𝗢𝗖𝗛𝗧𝗔 𝗢𝗟𝗔𝗠𝗜𝗭", "ЮРАМАН", "МАШИНА КОБАЛЬТ", "машена жентира", "оламиз",
     "946858486", "+998916858486", "+998932349830", "🏥Аптека", "https://t.me/aptekaonlinesam/618402", "Адрес:Беруний кўчаси 32А-уй", "Аптека: ALPHA PHARM",
     "Ориентир", "@alphapharm111", "Иш вакти: 7:00 дан 23:00 гача", "ULAMOLAR BISOTIDAN", "Saodatga yetaklovchi hikmatlar", "@Bahodir2580", " Suhandon: Muhammad Nur",
-    "@Mohira_Diamond_Director", "+998901460112", "Bts", "Emu pochtalaridan chqaramiz"
+    "@Mohira_Diamond_Director", "+998901460112", "Bts", "Emu pochtalaridan chqaramiz", "Qizlajonla Sovunli gul buketlani", "ulab qoyamiz  uzb bòylab", "ҚОН БОСИМИМ 10 ЙИЛДАН БЕРИ 180 ГА 120 БЎЛАР ЭДИ",
+    "✅Бу мўъжиза эди", "@JoinHiderar_Bot", "https://shop.mxmedia.uz/faeton/?web=2", "+998944931293", "YURAMIZ", ""
 ]
 
 # ---- Hammasini lowercase ----
