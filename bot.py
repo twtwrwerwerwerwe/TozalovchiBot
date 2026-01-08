@@ -36,7 +36,7 @@ KEYWORDS = [
     "@Mohira_Diamond_Director", "901460112", "Bts", "Emu pochtalaridan chqaramiz", "Qizlajonla Sovunli gul buketlani", "ulab qoyamiz  uzb bòylab", "ҚОН БОСИМИМ 10 ЙИЛДАН БЕРИ 180 ГА 120 БЎЛАР ЭДИ",
     "✅Бу мўъжиза эди", "@JoinHiderar_Bot", "https://shop.mxmedia.uz/faeton/?web=2", "944931293", "YURAMIZ", "@TozalaBot", "💆‍♀️Болаларим кундан кунга инжиқлашиб кетяпти.", "Тезда уланиб олинглар бу ёпиқ канал кейин қидириб топа олмайсизлар!👇",
     "bir oyli vipi bilan", "Murojaat uchun Lichka", "Songi dizayindagi DARVOZALAR", "@Darvoza_666", "⏰ 11 yillik uzluksiz tajriba 🤝1500 dan ortiq mijozlar", "Namangan", "Namangandan", "Namanganga", "NAMANGAN", "namangan",
-    "Ketadiganlar", "2 kishi kerak", "termizga", "termiz", "beshariq", "bewariq", "501554406", "Beshariqga", "besh ariqga", "MiLadiy_boutique", "Dastafka bormi", 'Milady', "Чекланмаган миқдорда", "Пенаблок сотилади", ""
+    "Ketadiganlar", "2 kishi kerak", "termizga", "termiz", "beshariq", "bewariq", "501554406", "Beshariqga", "besh ariqga", "MiLadiy_boutique", "Dastafka bormi", 'Milady', "Чекланмаган миқдорда", "Пенаблок сотилади"
 ]
 
 # ---- Hammasini lowercase ----
