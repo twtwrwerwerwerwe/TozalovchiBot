@@ -38,7 +38,8 @@ KEYWORDS = [
     "bir oyli vipi bilan", "Murojaat uchun Lichka", "Songi dizayindagi DARVOZALAR", "@Darvoza_666", "⏰ 11 yillik uzluksiz tajriba 🤝1500 dan ortiq mijozlar", "Namangan", "Namangandan", "Namanganga", "NAMANGAN", "namangan",
     "Ketadiganlar", "2 kishi kerak", "termizga", "termiz", "beshariq", "bewariq", "501554406", "Beshariqga", "besh ariqga", "MiLadiy_boutique", "Dastafka bormi", 'Milady', "Чекланмаган миқдорда", "Пенаблок сотилади",
     "@Xisoblovchibot", "Қиз фарзандингиз бўлса, асло мушук боқманг! Сабабини билсангиз, шокка тушишингиз аниқ", "93.437.66.59", "олиб кетаман", "+998944409277", "БОТИРЖОН", "+998939817997",
-    "@Umidjon797", "https://alijahon.uz/oqim/105608", "Уй ва офислар учун — Wifi smart camera", "Smart soat Ultra TW8", "Qozoq K5 salarka bor", "+998940011519", "Assalomu alaykum xurmatli xaridorla Qozogʻston 🇰🇿🇰🇿🇰🇿"
+    "@Umidjon797", "https://alijahon.uz/oqim/105608", "Уй ва офислар учун — Wifi smart camera", "Smart soat Ultra TW8", "Qozoq K5 salarka bor", "+998940011519", "Assalomu alaykum xurmatli xaridorla Qozogʻston 🇰🇿🇰🇿🇰🇿",
+    "905303368", "911303368", "🏘⛽️Xujalik propan gaz balon  sotiladi ulgurib qoling arzon ✍️", "@XJTLA"
 ]
 
 # ---- Hammasini lowercase ----
